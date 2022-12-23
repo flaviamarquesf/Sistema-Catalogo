@@ -1,0 +1,13 @@
+*{
+    margin: 1;
+    padding: 1;
+}
+.pagina{
+    display: flex;
+}
+.pesquisa{
+    display: flex;
+}
+.funcoes{
+    display: flex;
+}

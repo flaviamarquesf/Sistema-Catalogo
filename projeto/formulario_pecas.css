@@ -1,0 +1,88 @@
+*{
+    margin: 1;
+    padding: 1;
+ }
+ 
+ #titulo{
+     font-family: sans-serif;
+     color:rgba(24, 129, 26, 0.752);
+     margin-left: 0%;
+     align-items: center;
+ }
+ 
+ body{
+     background-color: #9fbe9f60;
+     font-family: sans-serif;
+     font-size: 1em;
+     color: rgb(0, 0, 0);
+     margin-left: 36%;
+     margin-top: 2%;
+     justify-content: center;
+ }
+ 
+ .form{
+     align-items: center;
+     border: 2px solid rgb(0, 0, 0);
+     position:absolute;
+     top: 4%;
+     left: 36%;
+     padding-left: 50px;
+     padding-right: 50px;
+     padding-top: 0px;
+     padding-bottom: 50px;
+     box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.318);
+ }
+ 
+ .corpo{
+     border: 1px;
+ }
+ 
+ input{
+     border-radius: 5px;
+ }
+ 
+ .campo{
+     margin-bottom: 1em;
+ }
+ 
+ .campo label{
+     margin-bottom:0.2;
+     color: rgb(0, 0, 0);
+     display: block;
+ 
+ }
+ 
+ .campo input[type="text"], .campo input[type="number"] {
+     padding: 0.5em;
+     border: 1px solid rgba(0, 0, 0, 0.636);
+     box-shadow: 3px 3px 3px 3px rgb(0, 0, 0, 0.2);
+     display: block;
+ }
+ 
+ .campo input:focus{
+     background-color: rgba(56, 203, 58, 0.154);
+ }
+ 
+ .botao{
+     font-size: 1em;
+     background-color:rgba(255, 255, 255, 0.348); ;
+     border: 0.0005;
+     margin-bottom: 0em;
+     color: black;
+     padding: 0.2em 0.6em;
+     box-shadow: 4px 4px 4px rgb(0, 0, 0, 0.2);
+     text-shadow: 1px 1px 1px rgb(0, 0, 0, 0.2);
+     position: absolute;
+     top: 87%;
+     left: 50%;
+     margin-right: -50%;
+     transform: translate(-50% -50%)
+     
+ }
+ 
+ .botao:hover{
+     background-color: rgba(56, 203, 58, 0.342);
+     box-shadow: 2px 2px 2px  rgb(0, 0, 0, 0.2);
+     text-shadow: none;
+ }
+ 

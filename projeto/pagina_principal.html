@@ -2,101 +2,164 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-    <title>Menu em CSS Dropdown Horizontal - Linha de Código</title>
-   <!-- <link rel="stylesheet" type="text/css"  href="style (1).css" />--> 
-    <!--[if lte IE 8]>
- <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
- <![endif]-->    
+    <title> Menu </title>
+    <link rel="icon" type="image" href="imagens/menu.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="pagina_principal.css">
 </head>
+
 <body>
-<nav>
-  <ul class="menu">
-		<li id="inicio" onclick="exibirTabela(imagemInicio)"><a href="#">Laboratorio em manutenção</a></li>
-		<li id="tabela1" onclick="exibirTabela(table1)"><a href="#" >Computadores em uso</a></li>
-		<li id="tabela2" onclick="exibirTabela(table2)"><a href="#" >Peças</a></li>
-		<li id="tabela3" onclick="exibirTabela(table3)"><a href="#" >Ferramentas</a></li>
-</ul>
-</nav>
-<div class="container" id="imagemInicio">
-	<img src="https://s1.static.brasilescola.uol.com.br/be/vestibular/-5be58412af2ac.jpg" alt="logo">
-</div>
-<div id="table1" style="display:none;">
-	<button ><a href="formulario_pcs_em_uso.html">Cadastrar</a> </button>
-	<table border="1" >
-		<tr>
-			<td>Nome</td>
-			<td>Idade</td>
-			<td>Profissão</td>
-		</tr>
-		<tr>
-			<td>Ted</td>
-			<td>22</td>
-			<td>Estudante</td>
-		</tr>
-		<tr>
-			<td>Ralf</td>
-			<td>26</td>
-			<td>Designer</td>
-		</tr>
-	</table>
-</div>
+    <div class="pagina">
+        <div class="menu">
+            <h1 class="titulo"> Início </h1>
+            <h3>Laboratorio em manutenção</h3>
+            <button onclick="exibirTabela(table1)">
+                Computadores em uso
+            </button>
+            <button onclick="exibirTabela(table2)">
+                Peças
+            </button>
+            <button onclick="exibirTabela(table3)">
+                Ferramentas
+            </button>
+        </div>
+        <div class="tables">
+            <div id="table1" style="display:none;" class="table1">
+                <div class="funcoes">
+                    <div class="pesquisa">
+                        <input type="search" placeholder="Pesquisar" id="pesquisar">
+                        <button>
+                            <i class='fa fa-search'></i>
+                        </button>
+                    </div>
+                    <button class="botao"><a href="formulario_pcs_em_uso.html">Cadastrar</a> </button>
+                </div>
+                <table border="1" >
+                    <thead>
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Fabricante</th>
+                            <th>Modelo</th>
+                            <th>Memória</th>
+                            <th>Disco</th>
+                            <th>CPU</th>
+                            <th>Sistema operacional</th>
+                            <th>Quantidade</th>
+                            <th>- - -</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                            <td>".$cadastro_data['tipo']."</td>
+                            <td>".$cadastro_data['fabricante']."</td>
+                            <td>".$cadastro_data['modelo']."</td>
+                            <td>".$cadastro_data['memoria']."</td>
+                            <td>".$cadastro_data['disco']."</td>
+                            <td>".$cadastro_data['cpu']."</td>
+                            <td>".$cadastro_data['so']."</td>
+                            <td>".$cadastro_data['quantidade']."</td>
+                            <td>
+                                <a href='#'><i class='fa fa-edit'></i></a>
+                                <a href='#'><i class='fa fa-trash'></i></a>
+                            </td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
 
-<div id="table2" style="display:none;">
-	<button ><a href="formulario_pecas.html">Cadastrar</a> </button>
-	<table border="1" >
-		<tr>
-			<td>Nome</td>
-			<td>Idade</td>
-			<td>Profissão</td>
-		</tr>
-		<tr>
-			<td>Ted</td>
-			<td>22</td>
-			<td>Estudante</td>
-		</tr>
-		<tr>
-			<td>testeeee</td>
-			<td>26</td>
-			<td>Designer</td>
-		</tr>
-	</table>
-</div>
+            <div id="table2" style="display:none;" class="table2">
+                <div class="funcoes">
+                    <div class="pesquisa">
+                        <input type="search" placeholder="Pesquisar" id="pesquisar">
+                        <button>
+                            <i class='fa fa-search'></i>
+                        </button>
+                    </div>
+                    <button class="botao"><a href="formulario_pecas.html">Cadastrar</a> </button>
+                </div>
+                <table border="1" >
+                    <thead>
+                        <tr>
+                            <th>Periférico</th>
+                            <th>Interface</th>
+                            <th>Estado</th>
+                            <th>Quantidade</th>
+                            <th>- - -</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                <tr>
+                                <td>".$cadastro_data['periferico']."</td>
+                                <td>".$cadastro_data['interface']."</td>
+                                <td>".$cadastro_data['estado']."</td>
+                                <td>".$cadastro_data['quantidade']."</td>
+                                <td>
+                                    <a href='#'><i class='fa fa-edit'></i></a>
+                                    <a href='#'><i class='fa fa-trash'></i></a>
+                                </td>
+                                </tr>
+                    </tbody>
+                </table>
+            </div>
 
-<div id="table3" style="display:none;">
-	<button ><a href="formulario_ferramentas.html">Cadastrar</a></button>
-	<table border="1" >
-		<tr>
-			<td>Nome</td>
-			<td>Idade</td>
-			<td>Profissão</td>
-		</tr>
-		<tr>
-			<td>Ted</td>
-			<td>22</td>
-			<td>Estudante</td>
-		</tr>
-		<tr>
-			<td>teste</td>
-			<td>26</td>
-			<td>Designer</td>
-		</tr>
-	</table>
-</div>
-
+            <div id="table3" style="display:none;" class="table3">
+                <div class="funcoes">
+                    <div class="pesquisa">
+                        <input type="search" placeholder="Pesquisar" id="pesquisar">
+                        <button>
+                            <i class='fa fa-search'></i>
+                        </button>
+                    </div>
+                    <button class="botao" ><a href="formulario_ferramentas.html">Cadastrar</a></button>
+                </div>
+                <table border="1" >
+                    <thead>
+                        <tr>
+                            <th>Ferramenta</th>
+                            <th>Fabricante</th>
+                            <th>Quantidade</th>
+                            <th>- - -</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                            <td>".$cadastro_data['ferramenta']."</td>
+                            <td>".$cadastro_data['fabricante']."</td>
+                            <td>".$cadastro_data['quantidade']."</td>
+                            <td>
+                                <a href='#'><i class='fa fa-edit'></i></a>
+                                <a href='#'><i class='fa fa-trash'></i></a>
+                            </td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 <script>
- function exibirTabela(table){
+    function exibirTabela(table){
 	
-   if(table.style.display == "none") { 
-	table1.style.display="none";
-	table2.style.display="none";
-	table3.style.display="none";
-    
-	table.style.display="block" 
- }
- else { 
-   table.style.display="none"; 
- }
-}
+    if(table.style.display == "none") { 
+        table1.style.display="none";
+        table2.style.display="none";
+        table3.style.display="none";
+        
+        table.style.display="block" 
+        }
+        else { 
+        table.style.display="none"; 
+        }
+    }
+    let search = document.getElementById('pesquisar');
+    search.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") 
+        {
+            searchData();
+        }
+    });
+    function searchData(){
+        window.location = 'pagina_principal.php?search='+search.value;
+    }
 </script>
 </body>
 </html>
